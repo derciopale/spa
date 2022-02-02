@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Endereco extends Model
 {
     use HasFactory;
+    protected $fillable = ['provincia', 'distrito', 'bairro'];
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
